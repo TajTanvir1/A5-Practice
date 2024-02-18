@@ -8,3 +8,27 @@
 .font-inter{
     font-family: "Inter", sans-serif;
 }
+
+.seat-color{
+    background-color: #F7F8F8;
+    color: #03071280;
+    font-size: 18px;
+    width: 110px;
+    height: 56px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 16px;
+    margin-left: 24px;
+    margin-top: 20px;
+}
+
+.serial-design{
+    height: 56px;
+    margin-top: 20px;
+    color: #03071280;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+}
