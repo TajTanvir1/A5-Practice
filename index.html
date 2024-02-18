@@ -101,8 +101,8 @@
 
    <!-- Main section Start Here -->
    <main>
-      <!-- Best Offers -->
-      <section class="mx-20 mt-16 flex flex-col items-center">
+      <!-- Best Offers Coupon -->
+      <section class="mx-20 mt-16 flex flex-col items-center hidden">
          <h1 class="font-raleway text-4xl font-bold mb-10 text-center">Best Offers for you</h1>
 
          <div class="flex gap-8">
@@ -141,8 +141,8 @@
       </section>
 
       <!-- Ticket Information Container -->
-      <section class="border-[#1DD100] border-t-2 mt-24 rounded-[88px] bg-[#F7F8F8]">
-         <div class="paribahan-text mt-24 text-center">
+      <section class="border-[#1DD100] border-t-2 mt-24 rounded-t-[88px] bg-[#F7F8F8] pb-[120px]">
+         <div class="paribahan-text mt-24 text-center hidden">
             <h1 class="text-4xl font-bold font-raleway text-[#030712]">
                P.H Paribahan
             </h1>
@@ -151,7 +151,7 @@
          </div>
 
          <!-- Ticket Details -->
-         <div class="bg-white w-[85%] mx-auto flex rounded-2xl mb-6">
+         <div class="bg-white w-[85%] mx-auto flex rounded-2xl mb-6 hidden">
             <!-- 1 -->
             <div class="m-8">
                <div class="flex gap-[230px]">
@@ -309,14 +309,62 @@
                <h1 class="text-2xl font-semibold font-raleway border-[#03071233] border-dashed border-b pb-6">Select
                   Your Seat</h1>
                <!-- Price Count -->
-               <div class="w-[430px] h-[335px] bg-[#F7F8F8] font-inter rounded-2xl mt-6">
-                  <div class="border-[#03071233] border-dashed border-b flex justify-between p-4">
+               <div class="w-[430px] h-[335px] bg-[#F7F8F8] font-inter rounded-2xl mt-6 px-6">
+                  <div class="border-[#03071233] border-dashed border-b flex justify-between py-4">
                      <h3 class="text-[#030712] font-medium">Seat <span
                            class="bg-[#1DD100] text-white p-2 font-bold text-sm rounded-lg">0</span></h3>
                      <h3 class="text-[#030712] font-medium">Class</h3>
                      <h3 class="text-[#030712] font-medium">Price</h3>
                   </div>
-
+                  <div class="flex justify-between py-4">
+                     <p class="text-[#03071299] text-base">B3</p>
+                     <p class="text-[#03071299] text-base">Economy</p>
+                     <p class="text-[#03071299] text-base">550</p>
+                  </div>
+                  <div class="border-[#03071233] border-b flex justify-between py-4">
+                     <p class="text-[#03071299] text-base">B3</p>
+                     <p class="text-[#03071299] text-base">Economy</p>
+                     <p class="text-[#03071299] text-base">550</p>
+                  </div>
+                  <div class="flex justify-between py-2">
+                     <h3 class="text-[#030712] font-medium">Total Price</h3>
+                     <h3 class="text-[#030712] font-medium">BDT <span>1100</span></h3>
+                  </div>
+                  <!-- Coupon Input -->
+                  <div class="bg-white w-full p-2 flex justify-between rounded-xl">
+                     <input type="text" value="" placeholder="Have any copupon?" class="ml-3">
+                     <button class="btn  bg-[#1DD100] text-white">Apply</button>
+                  </div>
+                  <div class="flex justify-between py-4">
+                     <h3 class="text-[#030712] font-medium">Grand Total</h3>
+                     <h3 class="text-[#030712] font-medium">BDT <span>1100</span></h3>
+                  </div>
+               </div>
+               <!-- Passenger Info -->
+               <div class="font-inter">
+                  <div class="mt-6">
+                     <h1 class="text-[#030712] font-semibold">Passenger Name*</h1>
+                     <div class="">
+                        <input class="w-full px-6 py-4 border-[#0307121A] border-2 rounded-xl mt-3" type="text" placeholder="Enter your name">
+                     </div>
+                  </div>
+                  <div class="mt-6">
+                     <h1 class="text-[#030712] font-semibold">Phone Number*</h1>
+                     <div class="">
+                        <input class="w-full px-6 py-4 border-[#0307121A] border-2 rounded-xl mt-3" type="number" placeholder="Enter your phone number">
+                     </div>
+                  </div>
+                  <div class="mt-6">
+                     <h1 class="text-[#030712] font-semibold">Email ID</h1>
+                     <div class="">
+                        <input class="w-full px-6 py-4 border-[#0307121A] border-2 rounded-xl mt-3" type="text" placeholder="Enter your email id">
+                     </div>
+                  </div>
+                  <button class="btn w-full bg-[#1DD100] text-white font-raleway mt-6 text-xl font-extrabold">Next</button>
+               </div>
+               <div class="flex justify-around font-inter text-[#03071299] mt-4">
+                  <h3>Terms and Conditions</h3>
+                  <h3>Cancellation Policy</h3>
                </div>
             </div>
          </div>
@@ -325,8 +373,8 @@
    </main>
 
    <!-- Footer Start Here -->
-   <footer>
-
+   <footer class="bg-[#030712] h-[450px]">
+      
    </footer>
 
    <!-- JavaScript Files Link here -->
