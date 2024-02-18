@@ -59,11 +59,15 @@ for (const seat of allSeat) {
                     grandTotalPriceCount = totalPriceCount * .85;
                     grandTotalPrice.innerText = grandTotalPriceCount;
                     console.log(grandTotalPriceCount);
+                    const couponInputContainer = document.getElementById('coupon-container');
+                    couponInputContainer.classList.add('hidden');
                 }
                 else if(couponInput === 'Couple 20'){
                     grandTotalPriceCount = totalPriceCount * .80;
                     grandTotalPrice.innerText = grandTotalPriceCount;
                     console.log(grandTotalPriceCount);
+                    const couponInputContainer = document.getElementById('coupon-container');
+                    couponInputContainer.classList.add('hidden');
                 }
             })
         }
@@ -73,32 +77,3 @@ for (const seat of allSeat) {
     })
 }
 
-const grandTotalPrice = document.getElementById('grand-total');
-
-const inputBtn = document.getElementById('input-btn');
-inputBtn.addEventListener('click', function () {
-    // input value
-    const couponInput = document.getElementById('coupon-input').value;
-    console.log(couponInput);
-
-    if (totalPriceCount >= 2200) {
-        if (couponInput === NEW15) {
-            const grandTotalPrice15 = totalPriceCount * .85;
-            grandTotalPrice.innerText = grandTotalPrice15;
-        }
-        else if (couponInput === Couple 20) {
-
-        }
-    }
-    else {
-        const grandTotalPrice = document.getElementById('grand-total');
-        const coupon = document.getElementById('coupon-input');
-        console.log(coupon.value);
-
-        grandTotalPriceCount = totalPriceCount;
-        grandTotalPrice.innerText = grandTotalPriceCount;
-    }
-
-})
-
-*/
