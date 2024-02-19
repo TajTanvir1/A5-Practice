@@ -8,7 +8,7 @@ for (const seat of allSeat) {
 
     seat.addEventListener("click", function (e) {
         if (countAdd > 3) {
-            // alert('Invalid - You can purchase only 4 tickets');
+            alert('One person can purchase only 4 tickets.');
             seat.removeEventListener("click");
             seat.classList.add('bg-[#F7F8F8]', 'text-[#03071280]');
             seat.classList.remove('seat-color');
@@ -59,6 +59,8 @@ for (const seat of allSeat) {
         // ----------------------------------- Coupon conditions
         if (totalPriceCount >= 2200) {
             const inputBtn = document.getElementById('input-btn');
+            const couponInputContainer = document.getElementById('coupon-container');
+            couponInputContainer.classList.remove('hidden')
             inputBtn.addEventListener('click', function () {
                 // input value
                 const couponInput = document.getElementById('coupon-input').value;
@@ -66,17 +68,21 @@ for (const seat of allSeat) {
                 if (couponInput === 'NEW15') {
                     grandTotalPriceCount = totalPriceCount * .85;
                     grandTotalPrice.innerText = grandTotalPriceCount;
-                    const couponInputContainer = document.getElementById('coupon-container');
                     couponInputContainer.classList.add('hidden');
                 }
                 else if (couponInput === 'Couple 20') {
                     grandTotalPriceCount = totalPriceCount * .80;
                     grandTotalPrice.innerText = grandTotalPriceCount;
-                    const couponInputContainer = document.getElementById('coupon-container');
                     couponInputContainer.classList.add('hidden');
                 }
-                else if(couponInput !== 'NEW15' || couponInput !== 'Couple 20') {
-                    couponInput = "";
+                else {
+                    alert("Invalid Coupon, kindly enter right coupon code for discount.")
+                    const couponInputClear = document.getElementById('coupon-input');
+                    const inputBtn = document.getElementById('input-btn');
+
+                    inputBtn.addEventListener('click', function(){
+                        couponInputClear.value = "";
+                    })
                 }
             })
         }

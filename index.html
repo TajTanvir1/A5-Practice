@@ -16,55 +16,60 @@
 
 <body class="mt-5">
    <!-- Navbar Start here -->
-   <div class="mx-14 navbar bg-base-100 font-raleway hidden">
-      <div class="navbar-start">
-         <div class="dropdown">
-            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                  stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
-               </svg>
+   <div class="mx-14">
+      <div class="navbar bg-base-100 font-raleway">
+         <div class="navbar-start">
+            <div class="dropdown">
+               <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                     stroke="currentColor">
+                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                  </svg>
+               </div>
+               <ul tabindex="0"
+                  class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-[#030712B3]">
+                  <li><a>Home</a></li>
+                  <li><a>About</a></li>
+                  <li><a>Destination</a></li>
+                  <li><a>Search</a></li>
+               </ul>
             </div>
-            <ul tabindex="0"
-               class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-[#030712B3]">
+            <a class="btn btn-ghost text-4xl text-[#030712] font-extrabold">P-Ticket</a>
+         </div>
+         <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1 text-[#030712B3] text-lg gap-5">
                <li><a>Home</a></li>
                <li><a>About</a></li>
                <li><a>Destination</a></li>
                <li><a>Search</a></li>
             </ul>
          </div>
-         <a class="btn btn-ghost text-4xl text-[#030712] font-extrabold">P-Ticket</a>
-      </div>
-      <div class="navbar-center hidden lg:flex">
-         <ul class="menu menu-horizontal px-1 text-[#030712B3] text-lg gap-5">
-            <li><a>Home</a></li>
-            <li><a>About</a></li>
-            <li><a>Destination</a></li>
-            <li><a>Search</a></li>
-         </ul>
-      </div>
-      <div class="navbar-end">
-         <a class="btn bg-[#1DD1001A] border-[#1DD10066] border-2 text-xl font-bold px-6 text-[#1DD100]">Bus <img
-               src="images/bus-icon.png" alt=""></a>
+         <div class="navbar-end">
+            <a class="btn bg-[#1DD1001A] border-[#1DD10066] border-2 text-xl font-bold px-6 text-[#1DD100]">Bus <img
+                  src="images/bus-icon.png" alt=""></a>
+         </div>
       </div>
    </div>
 
-   <!-- Header Start Here -->
-   <header class="mx-14 mt-6 hidden">
-
-      <!-- bg-[linear-gradient(90deg,rgba(3,7,18,1),rgba(3,7,18,0)),url(images/banner.png)] -->
-      <div
-         class="bg-[url(images/banner.png)] h-[550px] bg-center bg-contain bg-no-repeat flex flex-col justify-center items-center">
-         <!-- <img src="images/banner.png" alt=""> -->
-         <h1 class="text-6xl font-extrabold font-raleway text-center text-white">End-to-End Travel with <br> <span
-               class="text-[#1DD100]">P.H Paribahan</span></h1>
+   <!-- Header Start Here --> 
+   <header class="mx-14 mt-6">      
+      <!-- -------------------Banner Start -->
+      <div class="hero min-h-screen bg-center bg-contain bg-no-repeat flex flex-col justify-center items-center" style="background-image: url(images/banner.png);">
+         <div class="hero-overlay bg-opacity-60"></div>
+         <div class="hero-content text-center text-neutral-content">
+           <div class="">
+            <h1 class="text-6xl font-extrabold font-raleway text-center text-white">End-to-End Travel with </h1> 
+               <h1 class="text-[#1DD100] text-6xl font-extrabold font-raleway text-center my-4">P.H Paribahan</h1>
          <p class="text-sm font-inter text-white text-center my-5">
             Yes, you can run unit tests and view the results directly within the app. The <br> integrated testing
             features allow for a streamlined .
          </p>
-         <button class="btn text-black bg-[#1DD100] border-none text-xl font-bold text-center font-raleway btn-lg ">Buy
-            Ticket</button>
-      </div>
+         <button class="btn text-black bg-[#1DD100] border-none text-xl font-bold text-center font-raleway btn-lg ">Buy Ticket</button>
+           </div>
+         </div>
+       </div>
+      
+      <!-- -----------------------Banner End -->
 
       <!-- Count Bar -->
       <div class="flex gap-8 justify-center relative bottom-14">
@@ -102,7 +107,7 @@
    <!-- Main section Start Here -->
    <main>
       <!-- Best Offers Coupon -->
-      <section class="mx-20 mt-16 flex flex-col items-center hidden">
+      <section class="mx-20 mt-16 flex flex-col items-center">
          <h1 class="font-raleway text-4xl font-bold mb-10 text-center">Best Offers for you</h1>
 
          <div class="flex gap-8">
@@ -135,18 +140,17 @@
             </div>
          </div>
          <div class="text-center">
-            <button class="btn btn-lg border-[#1DD100] text-[#1DD100] bg-white mt-14 text-xl font-bold text-center">See
-               All Offers</button>
+            <button class="btn btn-lg border-[#1DD100] text-[#1DD100] bg-white mt-14 text-xl font-bold text-center">See All Offers</button>
          </div>
       </section>
 
       <!-- Ticket Information Container -->
       <section class="border-[#1DD100] border-t-2 mt-24 rounded-t-[88px] bg-[#F7F8F8] pb-[120px]">
-         <div class="paribahan-text mt-24 text-center hidden">
+         <div class="paribahan-text mt-24 text-center">
             <h1 class="text-4xl font-bold font-raleway text-[#030712]">
                P.H Paribahan
             </h1>
-            <p class="text-[#03071299] text-lg">Yes, you can run unit tests and view the results directly within the
+            <p class="text-[#03071299] text-lg mb-8 mt-4">Yes, you can run unit tests and view the results directly within the
                app. The integrated <br> testing features allow for a streamlined .</p>
          </div>
 
@@ -317,16 +321,7 @@
                      <h3 class="text-[#030712] font-medium">Class</h3>
                      <h3 class="text-[#030712] font-medium">Price</h3>
                   </div>
-                  <!-- <div class="flex justify-between py-4">
-                     <p class="text-[#03071299] text-base">B3</p>
-                     <p class="text-[#03071299] text-base">Economy</p>
-                     <p class="text-[#03071299] text-base">550</p>
-                  </div>
-                  <div class="border-[#03071233] border-b flex justify-between py-4">
-                     <p class="text-[#03071299] text-base">B3</p>
-                     <p class="text-[#03071299] text-base">Economy</p>
-                     <p class="text-[#03071299] text-base">550</p>
-                  </div> -->
+                  
                   <div id="selected-container" class="border-[#03071233] border-b flex flex-col justify-between py-4 ">
 
                   </div>
@@ -334,9 +329,10 @@
                      <h3 class="text-[#030712] font-medium">Total Price</h3>
                      <h3 class="text-[#030712] font-medium">BDT <span id="total-price">00</span></h3>
                   </div>
+
                   <!-- Coupon Input -->
-                  <div id="coupon-container" class="bg-white w-full p-2 flex justify-between rounded-xl">
-                     <input id="coupon-input" type="text" value="" placeholder="Have any copupon?" class="pl-3 rounded-lg">
+                  <div id="coupon-container" class="bg-white w-full p-2 flex justify-between rounded-xl hidden">
+                     <input id="coupon-input" type="text" value="" placeholder="Have any copupon?" class="pl-3 rounded-lg w-full">
                      <button id="input-btn" class="btn  bg-[#1DD100] text-white">Apply</button>
                   </div>
                   <div class="flex justify-between py-4">
@@ -344,6 +340,7 @@
                      <h3 class="text-[#030712] font-medium">BDT <span id="grand-total">00</span></h3>
                   </div>
                </div>
+
                <!-- Passenger Info -->
                <div class="font-inter">
                   <div class="mt-6">
