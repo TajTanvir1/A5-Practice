@@ -60,12 +60,13 @@ for (const seat of allSeat) {
         if (totalPriceCount >= 2200) {
             const inputBtn = document.getElementById('input-btn');
             const couponInputContainer = document.getElementById('coupon-container');
-            couponInputContainer.classList.remove('hidden')
+            couponInputContainer.classList.remove('hidden');
             inputBtn.addEventListener('click', function () {
                 // input value
                 const couponInput = document.getElementById('coupon-input').value;
                 
                 if (couponInput === 'NEW15') {
+                    
                     grandTotalPriceCount = totalPriceCount * .85;
                     grandTotalPrice.innerText = grandTotalPriceCount;
                     couponInputContainer.classList.add('hidden');
@@ -76,10 +77,10 @@ for (const seat of allSeat) {
                     couponInputContainer.classList.add('hidden');
                 }
                 else {
-                    alert("Invalid Coupon, kindly enter right coupon code for discount.")
+                    alert("Invalid Coupon, kindly enter right coupon code for discount.");
                     const couponInputClear = document.getElementById('coupon-input');
                     const inputBtn = document.getElementById('input-btn');
-
+                    inputBtn.classList.add('disabled:opacity-50')
                     inputBtn.addEventListener('click', function(){
                         couponInputClear.value = "";
                     })
@@ -96,7 +97,3 @@ for (const seat of allSeat) {
 const passengerName = document.getElementById('passenger-name').value;
 const passengerNumber = document.getElementById('passenger-number').value;
 const modalBtn = document.getElementById('modal-btn');
-
-if (passengerName !== '') {
-    modalBtn.classList.add('hidden')
-}
