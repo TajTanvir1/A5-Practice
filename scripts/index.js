@@ -5,21 +5,26 @@ let countAdd = 0;
 let countSub = 40;
 
 for (const seat of allSeat) {
+
     seat.addEventListener("click", function (e) {
+        if (countAdd > 3) {
+            // alert('Invalid - You can purchase only 4 tickets');
+            seat.removeEventListener("click");
+            seat.classList.add('bg-[#F7F8F8]', 'text-[#03071280]');
+            seat.classList.remove('seat-color');
+        }
         countAdd = countAdd + 1;
         countSub = countSub - 1;
         document.getElementById('seat-count').innerText = countAdd;
         document.getElementById('seat-left').innerText = countSub;
-        seat.classList.add('bg-[#1DD100]', 'text-white');
+
+
+        seat.classList.add('bg-[#1DD100]', 'text-white', 'pointer-events-none', 'btn');
+
 
         const seatNo = e.target.innerText;
         const selectedContainer = document.getElementById('selected-container');
 
-        if(countAdd > 4){
-            alert('Invalid - You can purchase only 4 tickets');
-            seat.removeEventListener("click")
-           }
-           
         // ---------------------------------- Seat info update on click
         const economy = "Economy";
         const price = 550;
@@ -48,8 +53,6 @@ for (const seat of allSeat) {
 
         // ----------------------------------- Grand Total Price
         const grandTotalPrice = document.getElementById('grand-total');
-        const coupon = document.getElementById('coupon-input');
-        console.log(coupon.value);
         grandTotalPriceCount = totalPriceCount;
         grandTotalPrice.innerText = grandTotalPriceCount;
 
@@ -59,20 +62,21 @@ for (const seat of allSeat) {
             inputBtn.addEventListener('click', function () {
                 // input value
                 const couponInput = document.getElementById('coupon-input').value;
-                console.log(couponInput);
-                if(couponInput === 'NEW15'){
+                
+                if (couponInput === 'NEW15') {
                     grandTotalPriceCount = totalPriceCount * .85;
                     grandTotalPrice.innerText = grandTotalPriceCount;
-                    console.log(grandTotalPriceCount);
                     const couponInputContainer = document.getElementById('coupon-container');
                     couponInputContainer.classList.add('hidden');
                 }
-                else if(couponInput === 'Couple 20'){
+                else if (couponInput === 'Couple 20') {
                     grandTotalPriceCount = totalPriceCount * .80;
                     grandTotalPrice.innerText = grandTotalPriceCount;
-                    console.log(grandTotalPriceCount);
                     const couponInputContainer = document.getElementById('coupon-container');
                     couponInputContainer.classList.add('hidden');
+                }
+                else if(couponInput !== 'NEW15' || couponInput !== 'Couple 20') {
+                    couponInput = "";
                 }
             })
         }
@@ -83,3 +87,10 @@ for (const seat of allSeat) {
 }
 
 
+const passengerName = document.getElementById('passenger-name').value;
+const passengerNumber = document.getElementById('passenger-number').value;
+const modalBtn = document.getElementById('modal-btn');
+
+if (passengerName !== '') {
+    modalBtn.classList.add('hidden')
+}
