@@ -21,8 +21,17 @@
     border-radius: 16px;
     margin-left: 24px;
     margin-top: 20px;
+    
 }
 
+/* .seat-color:hover {
+    background-color: #C9D4D4;
+} */
+
+/* #selected-container{
+    display: flex;
+    flex-wrap: wrap;
+} */
 .serial-design{
     height: 56px;
     margin-top: 20px;
